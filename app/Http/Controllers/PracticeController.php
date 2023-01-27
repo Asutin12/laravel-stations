@@ -17,4 +17,8 @@ class PracticeController extends Controller
         $test = 'test';
         return view('practice3',['testParam'=>$test]);
     }
+    public function getPractice(){
+        $practice = Practice::all();
+        return response()->json($practice);
+    }
 }
